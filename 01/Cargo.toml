@@ -1,0 +1,33 @@
+[package]
+name = "cse311_ds"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Fast input and output utilities
+text_io = "0.1.12" # Optional: For quick input parsing
+
+# Numerical utilities for number theory, primes, gcd, etc.
+num = "0.4"
+
+# Combinatorics and iterator utilities
+itertools = "0.14.0"
+
+# Random number generation for testing solutions locally
+rand = "0.8"
+
+# Custom assertions for testing edge cases in CP
+assert_cmd = "2.0"
+
+# Regex for string processing
+regex = "1.11.1"
+
+# Optional crates for debugging or development
+# Uncomment the following if needed
+# log = "0.4"
+# env_logger = "0.10"
+
+[[bin]]
+name = "bubble_sort"
+path = "src/bubble_sort.rs"
+
