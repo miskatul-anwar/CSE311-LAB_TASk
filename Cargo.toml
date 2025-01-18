@@ -7,3 +7,11 @@ edition = "2021"
 name = "bubble_sort"
 path = "src/bubble_sort.rs"
 
+[[bin]]
+name = "traversing"
+path = "src/traversing.rs"
+
+[[bin]]
+name = "insert_into_array"
+path = "src/insert_into_array.rs"
+
