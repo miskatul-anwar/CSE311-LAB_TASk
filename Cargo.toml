@@ -15,3 +15,14 @@ path = "src/traversing.rs"
 name = "insert_into_array"
 path = "src/insert_into_array.rs"
 
+[[bin]]
+name = "del_frm_ar"
+path = "src/del_frm_ar.rs"
+[[bin]]
+name = "linear_search"
+path = "src/linear_search.rs"
+
+[[bin]]
+name = "binary_search"
+path = "src/binary_search.rs"
+
