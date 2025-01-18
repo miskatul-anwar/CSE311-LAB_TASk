@@ -27,6 +27,7 @@ impl Scanner {
     }
 }
 
+/*NOTE: implementation of binary search algorithm*/
 fn binary(data: &Vec<i32>, item: i32) {
     let mut beg = 0;
     let mut end = data.len();
@@ -47,6 +48,7 @@ fn binary(data: &Vec<i32>, item: i32) {
         println!("{item} is not in the list!");
     }
 }
+
 fn main() {
     let mut scanner = Scanner::new();
     let data = scanner._rin();

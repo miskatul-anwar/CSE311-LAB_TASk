@@ -1,3 +1,33 @@
+use std::io::{self, BufRead};
+
+struct Scanner {
+    reader: Box<dyn BufRead>,
+}
+
+impl Scanner {
+    fn new() -> Self {
+        Self {
+            reader: Box::new(io::stdin().lock()),
+        }
+    }
+
+    fn _rin(&mut self) -> Vec<i32> {
+        let mut input = String::new();
+        self.reader.read_line(&mut input).unwrap();
+        input
+            .split_whitespace()
+            .map(|i| i.parse().expect("Failed to parse integer"))
+            .collect()
+    }
+
+    fn _rin_int(&mut self) -> i32 {
+        let mut input = String::new();
+        self.reader.read_line(&mut input).unwrap();
+        input.trim().parse().expect("Failed to parse integer")
+    }
+}
+
+/*NOTE: implementation of linear search algorithm*/
 fn linear(data: Vec<i32>, n: usize, item: i32) {
     let mut loc = 0;
 
@@ -16,8 +46,9 @@ fn linear(data: Vec<i32>, n: usize, item: i32) {
     }
 }
 fn main() {
-    let data: Vec<i32> = vec![8, 2, 5, 9, 1, 4, 7, 10, 3, 6];
-    let item = 9;
+    let mut scanner = Scanner::new();
+    let data: Vec<i32> = scanner._rin();
+    let item = scanner._rin_int();
     let n = data.len();
     linear(data, n, item);
 }
