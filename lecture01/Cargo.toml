@@ -1,0 +1,10 @@
+[package]
+name = "Lecture01"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+[[bin]]
+name = "insert_in_str"
+path = "src/insert_in_str.rs"
+
